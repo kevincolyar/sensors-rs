@@ -11,3 +11,12 @@ actix-web = "4.1.0"
 anyhow = "1.0.58"
 chrono = "0.4.19"
 serde = { version = "1.0", features = ["derive"] }
+
+
+[[bin]]
+name = "sensors"
+path = "src/main.rs"
+
+[lib]
+name = "sensors"
+path = "src/lib.rs"
