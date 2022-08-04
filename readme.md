@@ -6,7 +6,7 @@ The purpose of the project it to demonstrate the implementation of a sensor API.
 
 It is deployed to the following url:
 
-http://sensors.kevin.colyar.net/v1/
+    TODO
 
 ## API Routes
 
@@ -47,7 +47,7 @@ The `DELETE` request at `/errors` should clear the errors buffer.
 
 API Documentation can be viewed at the following url:
 
-http://sensors.kevin.colyar.net/v1/docs
+    TODO
 
 ## Releases/Roadmap
 
@@ -57,13 +57,13 @@ See `releases.md` for project progress.
 
 The local API is deployed to the following url, per `docker-compose.yml`:
 
-http://localhost:3001/v1/
+http://localhost:3001/
 
 ## Deployment
 
 Deploy to Digital Ocean kubernetes cluster via:
 
-    ./bin/deploy.sh
+    TODO
     
 Deployment settings can be found in `./k8/`
 
@@ -71,15 +71,11 @@ Deployment settings can be found in `./k8/`
 
 ### Test Suite
 
-    docker compose run api pytest
+    cargo test
     
 ### Test Coverage
 
-    docker compose exec api coverage run -m pytest
-    docker compose exec api coverage report -m
-    docker compose exec api coverage html
-
-    open htmlcov/index.html
+    TODO
     
 ### Command Line Testing
 
@@ -90,28 +86,28 @@ Select endpoint:
 
 Errors:
 
-    curl $URL/v1/errors
-    curl -X "DELETE" $URL/v1/errors
+    curl $URL/errors
+    curl -X "DELETE" $URL/errors
 
 Temperature:
 
     curl -X POST -H "Content-Type: application/json" \
     -d '{"data": "365951380:1640995229697:'Temperature':58.48256793121914"}' \
-    $URL/v1/temp
+    $URL/temp
 
     curl -X POST -H "Content-Type: application/json" \
     -d '{"data": "365951380:1640995229697:'Temperature':90.0"}' \
-    $URL/v1/temp
+    $URL/temp
 
     curl -X POST -H "Content-Type: application/json" \
     -d '{"data": ":1640995229697:'Temperature':90.0"}' \
-    $URL/v1/temp
+    $URL/temp
     
 ### Smoke Test
 
 A simple smoke test script of the production API is provided via:
 
-    ./bin/smoke.sh
+    ./bin/smoke.sh http://localhost:3000
 
 ## Questions
 
