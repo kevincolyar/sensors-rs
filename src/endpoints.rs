@@ -2,6 +2,7 @@ use actix_web::{delete, get, post, web, Responder, HttpResponse, Error};
 
 use crate::measurement::*;
 use crate::requests::{MeasurementRequest};
+use crate::responses::{temperature};
 
 #[post("/temp")]
 pub async fn temp_post(item: web::Json<MeasurementRequest>) -> impl Responder {
@@ -9,7 +10,7 @@ pub async fn temp_post(item: web::Json<MeasurementRequest>) -> impl Responder {
     // println!("item: {:?}", &item);
     let m = Measurement::try_from(&*item.data);
 
-    return web::Json(m.unwrap())
+    return web::Json(temperature(m.unwrap()))
 }
 
 #[get("/foo")]

@@ -24,8 +24,8 @@
 - [ ] Deployment - dns - sensors.kevin.colyar.net
 
 ## v0.4.x
-- [ ] POST temp
-- [ ] Parse data
+- [X] POST temp
+- [X] Parse data
 - [ ] Response - {'overtemp': False}
 - [ ] Response - Error handling - Overtemp
 - [ ] Response - Error handling
@@ -35,10 +35,10 @@
 - [ ] Validation - temperature - float64
 
 ## v0.5.x
-- [ ] Testing - Setup
-- [ ] Testing - Unit tests
-- [ ] Testing - REST client
-- [ ] Testing - Bad type conversions
+- [X] Testing - Setup
+- [X] Testing - Unit tests
+- [X] Testing - REST client
+- [X] Testing - Bad type conversions
 - [ ] Testing - payload larger than VARCHAR 255
 
 ## v0.6.x
